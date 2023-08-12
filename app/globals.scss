@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.homepage {
+	background: linear-gradient(
+			329deg,
+			rgba(7, 0, 0, 0.199) 9.82%,
+			rgba(26, 39, 158, 0.199) 90.63%
+		),
+		url("../public/assets/homepageBg.jpg");
+
+	height: 100vh;
+	width: 100%;
+	object-fit: contain;
+	background-size: cover;
+	background-position: center 25%;
+}
+
+@layer base {
+	.my-max {
+		width: min(100% - 1.25em, 75rem);
+		margin-inline: auto;
+	}
+
+	.new {
+		position: relative;
+		&::before {
+			content: "New";
+			position: absolute;
+			top: -13px;
+			font-size: 13px;
+			right: 0;
+			font-weight: 700;
+			color: crimson;
+		}
+	}
+}
