@@ -26,7 +26,7 @@ const MobileNav = () => {
 				onClick={() => setToggleNav(false)}
 				className={`w-full ${
 					toggleNav ? "translate-x-0 delay-100 " : "translate-x-full delay-300"
-				} fixed top-0 left-0 h-screen bg-[#0000006c] transition-transform`}
+				} fixed top-0 left-0 h-screen bg-[#0000007a] transition-transform`}
 			>
 				<nav
 					onClick={(e: any) => handleCloseNav(e)}
@@ -36,7 +36,7 @@ const MobileNav = () => {
 												? "translate-x-0 delay-200"
 												: "translate-x-full delay-200"
 										}
-                    flex w-[80%] fixed right-0 flex-col h-full bg-[#000000af] items-center justify-center gap-5 transition-transform`}
+                    flex w-[80%] fixed right-0 flex-col h-full bg-[#000000c7] items-center justify-center gap-5 transition-transform`}
 				>
 					<AiOutlineCloseCircle
 						onClick={() => setToggleNav(false)}
@@ -46,10 +46,11 @@ const MobileNav = () => {
 						cursor={"pointer"}
 					/>
 					<Link
+						onClick={() => setToggleNav(false)}
 						className={`
                         ${
 													pathname === "/" &&
-													"before:w-full before:h-[4px] before:bg-[#6456e7]"
+													"before:w-full before:h-[4px] before:!bg-[#6456e7]"
 												}
                         active relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-1 before:bg-white before:transition-all `}
 						href={"/"}
@@ -57,30 +58,35 @@ const MobileNav = () => {
 						Home
 					</Link>
 					<Link
+						onClick={() => setToggleNav(false)}
 						className="active relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-1 before:bg-white before:transition-all "
 						href={""}
 					>
 						Products
 					</Link>
 					<Link
+						onClick={() => setToggleNav(false)}
 						className="active relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-1 before:bg-white before:transition-all "
 						href={""}
 					>
 						Shop
 					</Link>
 					<Link
+						onClick={() => setToggleNav(false)}
 						className="active relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-1 before:bg-white before:transition-all"
 						href={""}
 					>
 						Explore
 					</Link>
 					<Link
+						onClick={() => setToggleNav(false)}
 						className="active relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-1 before:bg-white before:transition-all"
 						href={""}
 					>
 						Services
 					</Link>
 					<Link
+						onClick={() => setToggleNav(false)}
 						className="active relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-1 before:bg-white before:transition-all"
 						href={""}
 					>
