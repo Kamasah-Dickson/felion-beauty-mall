@@ -7,22 +7,40 @@ import MobileNav from "./MobileNav";
 import { usePathname } from "next/navigation";
 import logo from "../../public/assets/50212d175691373 1.svg";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { container, item } from "../components/Animation";
 
 const Header = () => {
 	const pathname = usePathname();
 	return (
-		<header className=" bg-[#ffffff10] sticky top-0 p-4 z-20 filter backdrop-blur-sm saturate-150 md:saturate-100">
-			<div className="text-white flex items-center justify-between  my-max">
-				<Link href={"/"}>
-					<Image
-						className="w-auto cursor-pointer h-auto select-none"
-						width={150}
-						height={150}
-						alt=""
-						src={logo}
-					></Image>
-				</Link>
-				<nav className="hidden md:flex items-center justify-center gap-5">
+		<motion.header
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			className=" bg-[#ffffff10] sticky top-0  z-20 filter backdrop-blur-sm saturate-150 md:saturate-100"
+		>
+			<div className="text-white py-3 flex items-center justify-between  my-max">
+				<motion.div
+					initial={{ opacity: 0, x: "-15%" }}
+					animate={{ opacity: 1, x: "0%" }}
+					transition={{ delay: 1.4, duration: 2 }}
+					variants={container}
+				>
+					<Link href={"/"}>
+						<Image
+							className="w-auto cursor-pointer h-auto select-none"
+							width={150}
+							height={150}
+							alt=""
+							src={logo}
+						></Image>
+					</Link>
+				</motion.div>
+				<motion.nav
+					variants={container}
+					animate="show"
+					initial={"hidden"}
+					className="hidden md:flex items-center justify-center gap-5"
+				>
 					<Link
 						className={`${
 							pathname === "/" &&
@@ -32,37 +50,57 @@ const Header = () => {
 					>
 						Home
 					</Link>
-					<Link
-						className={` text-lg font-normal relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all `}
-						href={""}
-					>
-						Products
-					</Link>
-					<Link
-						className={` text-lg font-normal relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all `}
-						href={""}
-					>
-						Shop
-					</Link>
-					<Link
-						className={` text-lg font-normal relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all`}
-						href={""}
-					>
-						Explore
-					</Link>
-					<Link
-						className={` text-lg font-normal relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all`}
-						href={""}
-					>
-						Services
-					</Link>
-					<Link
-						className={` text-lg font-normal relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all`}
-						href={""}
-					>
-						Cart
-					</Link>
-				</nav>
+					<div className="overflow-hidden">
+						<motion.li className="list-none" variants={item}>
+							<Link
+								className={` text-lg font-normal relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all `}
+								href={""}
+							>
+								Shop
+							</Link>
+						</motion.li>
+					</div>
+					<div className="overflow-hidden">
+						<motion.li className="list-none" variants={item}>
+							<Link
+								className={` text-lg font-normal relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all `}
+								href={""}
+							>
+								Products
+							</Link>
+						</motion.li>
+					</div>
+					<div className="overflow-hidden">
+						<motion.li className="list-none" variants={item}>
+							<Link
+								className={` text-lg font-normal relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all`}
+								href={""}
+							>
+								Explore
+							</Link>
+						</motion.li>
+					</div>
+					<div className="overflow-hidden">
+						<motion.li className="list-none" variants={item}>
+							<Link
+								className={` text-lg font-normal relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all`}
+								href={""}
+							>
+								Services
+							</Link>
+						</motion.li>
+					</div>
+					<div className="overflow-hidden">
+						<motion.li className="list-none" variants={item}>
+							<Link
+								className={` text-lg font-normal relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all`}
+								href={""}
+							>
+								Cart
+							</Link>
+						</motion.li>
+					</div>
+				</motion.nav>
 
 				{/* <Link
 					className="hidden text-xl md:flex font-bold hover:underline new"
@@ -72,7 +110,7 @@ const Header = () => {
 				</Link> */}
 				<MobileNav />
 			</div>
-		</header>
+		</motion.header>
 	);
 };
 
