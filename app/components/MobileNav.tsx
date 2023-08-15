@@ -26,7 +26,7 @@ const MobileNav = () => {
 				onClick={() => setToggleNav(false)}
 				className={`w-full ${
 					toggleNav ? "translate-x-0 delay-100 " : "translate-x-full delay-300"
-				} fixed top-0 left-0 h-screen bg-[#0000007a] transition-transform`}
+				} fixed top-0 hidden md:flex left-0 h-screen bg-[#0000007a] transition-transform`}
 			>
 				<nav
 					onClick={(e: any) => handleCloseNav(e)}
@@ -62,14 +62,14 @@ const MobileNav = () => {
 						className="active relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-1 before:bg-white before:transition-all "
 						href={""}
 					>
-						Products
+						Shop
 					</Link>
 					<Link
 						onClick={() => setToggleNav(false)}
 						className="active relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-1 before:bg-white before:transition-all "
 						href={""}
 					>
-						Shop
+						Products
 					</Link>
 					<Link
 						onClick={() => setToggleNav(false)}
