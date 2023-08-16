@@ -4,10 +4,15 @@
 
 *::selection {
 	background-color: rgb(51, 37, 117);
+	scroll-behavior: smooth;
 }
 
 body {
+	min-height: 100vh;
 	user-select: none;
+}
+
+.hero {
 	background: url("../public/assets/homepageBg.jpg") center/cover,
 		linear-gradient(
 			329deg,
@@ -15,15 +20,27 @@ body {
 			rgba(26, 39, 158, 0.5) 90.63%
 		);
 	background-blend-mode: color;
-
 	min-height: 100vh;
-	// height: fit-content;
+
 	overflow-x: hidden;
 	width: 100%;
-	object-fit: contain;
 	background-size: cover;
 	background-position: center 15%;
 	background-repeat: no-repeat;
+}
+
+.featured {
+	background: url("../public/assets/featured.jpg") center/cover,
+		linear-gradient(
+			329deg,
+			rgba(7, 0, 0, 0.5) 9.82%,
+			rgba(26, 39, 158, 0.5) 90.63%
+		);
+	min-height: 100vh;
+	background-blend-mode: color;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
 }
 
 @layer base {
@@ -46,18 +63,29 @@ body {
 	}
 
 	.my-animation {
-		animation: smooth 0.7s infinite alternate;
-		&:hover {
-			animation-play-state: paused;
-		}
+		animation: smooth 3s linear infinite;
+	}
+
+	.scrolling-text {
+		animation: scroll_left 20s linear infinite;
+		white-space: nowrap;
+	}
+}
+
+@keyframes scroll_left {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(-100%);
 	}
 }
 
 @keyframes smooth {
 	from {
-		transform: translateY(20px);
+		transform: rotate(0deg);
 	}
 	to {
-		transform: translateY(0px);
+		transform: rotate(360deg);
 	}
 }
