@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import logo from "../../public/assets/50212d175691373 1.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { container, item } from "../components/Animation";
+import { container, item } from "../Animation";
 
 const Header = () => {
 	const pathname = usePathname();
@@ -16,13 +16,13 @@ const Header = () => {
 		<motion.header
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
-			className=" bg-[#ffffff10] sticky top-0  z-20 filter backdrop-blur-sm saturate-150 md:saturate-100"
+			className=" bg-[#ffffff10] fixed w-full top-0  z-20 filter backdrop-blur-sm saturate-150 md:saturate-100"
 		>
 			<div className="text-white py-3 flex items-center justify-between  my-max">
 				<motion.div
-					initial={{ opacity: 0, x: "-15%" }}
+					initial={{ opacity: 0, x: "-10%" }}
 					animate={{ opacity: 1, x: "0%" }}
-					transition={{ delay: 1.4, duration: 2 }}
+					transition={{ delay: 1.2, duration: 1.7 }}
 					variants={container}
 				>
 					<Link href={"/"}>
@@ -45,7 +45,7 @@ const Header = () => {
 						className={`${
 							pathname === "/" &&
 							"before:w-full before:h-[4px] before:!bg-[#6456e7]"
-						} text-lg font-normal relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all `}
+						} text-sm font-medium uppercase relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all `}
 						href={"/"}
 					>
 						Home
@@ -53,8 +53,21 @@ const Header = () => {
 					<div className="overflow-hidden">
 						<motion.li className="list-none" variants={item}>
 							<Link
-								className={` text-lg font-normal relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all `}
+								className={` text-sm font-medium uppercase relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all `}
 								href={""}
+							>
+								Featured
+							</Link>
+						</motion.li>
+					</div>
+					<div className="overflow-hidden">
+						<motion.li className="list-none" variants={item}>
+							<Link
+								className={`${
+									pathname === "/shop_now" &&
+									"before:w-full before:h-[4px] before:!bg-[#6456e7]"
+								} text-sm font-medium uppercase relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all `}
+								href={"/shop_now"}
 							>
 								Shop
 							</Link>
@@ -63,17 +76,7 @@ const Header = () => {
 					<div className="overflow-hidden">
 						<motion.li className="list-none" variants={item}>
 							<Link
-								className={` text-lg font-normal relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all `}
-								href={""}
-							>
-								Products
-							</Link>
-						</motion.li>
-					</div>
-					<div className="overflow-hidden">
-						<motion.li className="list-none" variants={item}>
-							<Link
-								className={` text-lg font-normal relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all`}
+								className={` text-sm font-medium uppercase relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all`}
 								href={""}
 							>
 								Explore
@@ -83,7 +86,7 @@ const Header = () => {
 					<div className="overflow-hidden">
 						<motion.li className="list-none" variants={item}>
 							<Link
-								className={` text-lg font-normal relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all`}
+								className={` text-sm font-medium uppercase relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all`}
 								href={""}
 							>
 								Services
@@ -93,7 +96,7 @@ const Header = () => {
 					<div className="overflow-hidden">
 						<motion.li className="list-none" variants={item}>
 							<Link
-								className={` text-lg font-normal relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all`}
+								className={` text-sm font-medium uppercase relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all`}
 								href={""}
 							>
 								Cart
