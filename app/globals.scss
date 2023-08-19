@@ -11,6 +11,9 @@ body {
 	min-height: 100vh;
 	user-select: none;
 }
+img {
+	display: block;
+}
 
 .hero {
 	background: url("../public/assets/homepageBg.jpg") center/cover,
@@ -41,11 +44,12 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center top;
+	background-attachment: fixed;
 }
 
 @layer base {
 	.my-max {
-		width: min(100% - 1.25em, 75rem);
+		width: min(100% - 1.6em, 75rem);
 		margin-inline: auto;
 	}
 
