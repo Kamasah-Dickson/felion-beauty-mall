@@ -2,6 +2,11 @@ import "./globals.scss";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import Header from "./components/Header";
+import AppContext from "./context/appContext";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const roboto = Roboto({
 	subsets: ["latin"],
@@ -21,12 +26,12 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={roboto.className}>
-				{
+				<AppContext>
 					<>
 						<Header />
 						{children}
 					</>
-				}
+				</AppContext>
 			</body>
 		</html>
 	);
