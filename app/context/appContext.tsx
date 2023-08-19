@@ -1,11 +1,22 @@
-import { createContext, useState, SetStateAction, Dispatch } from "react";
-import { Icart, Iproducts } from "../interface/ProductInterface";
-
+"use client";
+import {
+	createContext,
+	useState,
+	SetStateAction,
+	Dispatch,
+	useEffect,
+} from "react";
+import { Iproducts } from "../interface/ProductInterface";
 interface storeContext {
 	setCart: Dispatch<SetStateAction<Icart[]>>;
 	removeItemFromCart: (productItem: Iproducts) => void;
+	decrementProductCount: (targetProductItem: Iproducts) => void;
 	addItemToCart: (productItem: Iproducts) => void;
 	cart: Iproducts[];
+}
+
+interface Icart extends Iproducts {
+	numberOfItem: number;
 }
 
 export const ProductContext = createContext<storeContext>({
@@ -13,37 +24,75 @@ export const ProductContext = createContext<storeContext>({
 	setCart: () => {},
 	removeItemFromCart: () => {},
 	addItemToCart: () => {},
+	decrementProductCount: () => {},
 });
 
 const AppContext = ({ children }: { children: React.ReactElement }) => {
 	const [cart, setCart] = useState<Icart[]>([]);
 
 	const removeItemFromCart = (productItem: Iproducts) => {
-		setCart((prev) => prev.filter((product) => product.id !== productItem.id));
+		cart.filter((product) => product.id !== productItem.id);
 	};
 
 	const addItemToCart = (newProductItem: Iproducts) => {
-		const findProductInCart = cart.find(
-			(product) => product.id === newProductItem.id
+		const checkProductIsInCart = cart.find(
+			(product) => product?.id === newProductItem.id
 		);
-		if (findProductInCart) {
+
+		if (!checkProductIsInCart) {
+			setCart((prev) => [...prev, { ...newProductItem, numberOfItem: 1 }]);
+		} else {
 			setCart((prev) =>
 				prev.map((product) => {
-					if (product.id !== findProductInCart.id) {
-						return { ...newProductItem, numberOfItem: 1 };
-					} else {
-						return { ...product, numberOfItem: product.numberOfItem + 1 };
+					if (product?.id === checkProductIsInCart.id) {
+						return {
+							...checkProductIsInCart,
+							numberOfItem: checkProductIsInCart.numberOfItem + 1,
+						};
 					}
+					return product;
 				})
 			);
-		} else {
-			setCart((prev) => [...prev, { ...newProductItem, numberOfItem: +1 }]);
 		}
 	};
 
+	const decrementProductCount = (targetProductItem: Iproducts) => {
+		const findThatProduct = cart.find(
+			(product) => product.id === targetProductItem.id
+		);
+
+		if (findThatProduct) {
+			setCart((prev) =>
+				prev.map((product) => {
+					if (product.id === findThatProduct.id) {
+						return {
+							...findThatProduct,
+							numberOfItem:
+								findThatProduct.numberOfItem >= 1
+									? findThatProduct.numberOfItem - 1
+									: findThatProduct.numberOfItem,
+						};
+					}
+
+					return product;
+				})
+			);
+		}
+	};
+
+	useEffect(() => {
+		console.log(cart);
+	}, [cart]);
+
 	return (
 		<ProductContext.Provider
-			value={{ cart, setCart, removeItemFromCart, addItemToCart }}
+			value={{
+				cart,
+				setCart,
+				removeItemFromCart,
+				addItemToCart,
+				decrementProductCount,
+			}}
 		>
 			{children}
 		</ProductContext.Provider>
