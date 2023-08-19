@@ -63,19 +63,18 @@ const AppContext = ({ children }: { children: React.ReactElement }) => {
 
 		if (findThatProduct) {
 			setCart((prev) =>
-				prev.map((product) => {
-					if (product.id === findThatProduct.id) {
-						return {
-							...findThatProduct,
-							numberOfItem:
-								findThatProduct.numberOfItem >= 1
-									? findThatProduct.numberOfItem - 1
-									: findThatProduct.numberOfItem,
-						};
-					}
+				prev
+					.map((product) => {
+						if (product.id === findThatProduct.id) {
+							return {
+								...findThatProduct,
+								numberOfItem: Math.max(findThatProduct.numberOfItem - 1, 0),
+							};
+						}
 
-					return product;
-				})
+						return product;
+					})
+					.filter((product) => product.numberOfItem > 0)
 			);
 		}
 	};
