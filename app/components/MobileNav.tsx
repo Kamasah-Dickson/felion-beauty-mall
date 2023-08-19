@@ -1,17 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState, useContext } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { usePathname } from "next/navigation";
+import { ProductContext } from "../context/appContext";
 
 const MobileNav = () => {
 	const pathname = usePathname();
+	const { cart } = useContext(ProductContext);
 	const [toggleNav, setToggleNav] = useState(false);
 	const handleCloseNav = (e: any) => {
 		e.stopPropagation();
 	};
+
 	return (
 		<div className="md:hidden">
 			<HiOutlineMenuAlt3
@@ -26,7 +29,7 @@ const MobileNav = () => {
 				onClick={() => setToggleNav(false)}
 				className={`w-full ${
 					toggleNav ? "translate-x-0 delay-100 " : "translate-x-full delay-300"
-				} fixed top-0 hidden md:flex left-0 h-screen bg-[#0000007a] transition-transform`}
+				} fixed top-0  md:flex left-0 h-screen bg-[#0000007a] transition-transform`}
 			>
 				<nav
 					onClick={(e: any) => handleCloseNav(e)}
@@ -36,7 +39,7 @@ const MobileNav = () => {
 												? "translate-x-0 delay-200"
 												: "translate-x-full delay-200"
 										}
-                    flex w-[80%] fixed right-0 flex-col h-full bg-[#000000c7] items-center justify-center gap-5 transition-transform`}
+                    flex w-[80%] fixed  right-0 flex-col h-full bg-[#000000c7] items-center justify-center gap-5 transition-transform`}
 				>
 					<AiOutlineCloseCircle
 						onClick={() => setToggleNav(false)}
@@ -91,6 +94,11 @@ const MobileNav = () => {
 						href={""}
 					>
 						Cart
+						{cart.length >= 1 && (
+							<div className="absolute z-10 -top-2 p-2 grid place-content-center font-bold rounded-full w-5 h-5 -right-4 bg-[#3a3add]">
+								{cart.length}
+							</div>
+						)}
 					</Link>
 				</nav>
 			</div>
