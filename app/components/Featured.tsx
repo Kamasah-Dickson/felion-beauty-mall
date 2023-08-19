@@ -35,6 +35,7 @@ const Featured = ({
 					))}
 				</div>
 			</div>
+
 			<motion.h1
 				initial={{ opacity: 0, y: "-40%" }}
 				whileInView={{
@@ -83,6 +84,7 @@ const Featured = ({
 					);
 				})}
 			</motion.ul>
+
 			<div className="mySwiper my-max my-grid mt-20">
 				<SingleFeaturedProduct category={category} />
 			</div>
