@@ -16,7 +16,7 @@ img {
 }
 
 .hero {
-	background: url("../public/assets/homepageBg.jpg") center/cover,
+	background: url("../public/assets/homepageBg.jpg"),
 		linear-gradient(
 			329deg,
 			rgba(7, 0, 0, 0.5) 9.82%,
@@ -33,7 +33,7 @@ img {
 }
 
 .featured {
-	background: url("../public/assets/featured.jpg") center/cover,
+	background: url("../public/assets/featured.jpg"),
 		linear-gradient(
 			329deg,
 			rgba(7, 0, 0, 0.5) 9.82%,
@@ -45,6 +45,20 @@ img {
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-attachment: fixed;
+}
+.trending {
+	background: url("../public/assets/Trending.jpg");
+	// linear-gradient(
+	// 	329deg,
+	// 	rgba(7, 0, 0, 0.151) 9.82%,
+	// 	rgba(26, 39, 158, 0.205) 90.63%
+	// );
+	min-height: 100vh;
+	background-blend-mode: color;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+	// background-attachment: fixed;
 }
 
 @layer base {
