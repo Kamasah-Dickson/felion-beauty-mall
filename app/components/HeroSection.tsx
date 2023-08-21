@@ -27,7 +27,7 @@ function HeroSection() {
 							x: "0",
 							transition: { delay: 0.8, duration: 1.3 },
 						}}
-						className="text-5xl font-bold max-w-xs md:max-w-sm text-white md:p-0 p-5 max-wxs md:text-7xl ml-auto md:mt-10 text-right"
+						className="text-5xl font-bold max-w-xs md:max-w-sm text-white md:p-0 p-5 md:text-7xl ml-auto md:mt-10 text-right"
 					>
 						Let's Shop Beauty
 					</motion.h1>
