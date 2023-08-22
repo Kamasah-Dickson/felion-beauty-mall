@@ -7,7 +7,7 @@ import SingleFeaturedProduct from "./SingleFeaturedProduct";
 const Featured = ({
 	featuredRef,
 }: {
-	featuredRef: MutableRefObject<HTMLElement | null>;
+	featuredRef: MutableRefObject<HTMLDivElement | null>;
 }) => {
 	const [category, setCategory] = useState("all");
 	const featuredProducts = ["all", "wigs", "nails"];
@@ -18,10 +18,10 @@ const Featured = ({
 	];
 
 	return (
-		<section
+		<div
 			ref={featuredRef}
 			id="featured"
-			className=" featured relative bg-[#0a0a14] text-white text-center py-20"
+			className=" featured relative bg-[#0a0a14] text-white text-center py-28"
 		>
 			<div className="w-full flex  bg-[black] overflow-hidden text-white h-16 absolute -top-8 ">
 				<div className="flex w-fit scrolling-text h-full gap-20 ">
@@ -85,10 +85,10 @@ const Featured = ({
 				})}
 			</motion.ul>
 
-			<div className="mySwiper my-max my-grid mt-20">
+			<div className="mySwiper my-max mt-20">
 				<SingleFeaturedProduct category={category} />
 			</div>
-		</section>
+		</div>
 	);
 };
 
