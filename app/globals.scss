@@ -31,7 +31,6 @@ img {
 	background-position: center 15%;
 	background-repeat: no-repeat;
 }
-
 .featured {
 	background: url("../public/assets/featured.jpg"),
 		linear-gradient(
@@ -46,25 +45,55 @@ img {
 	background-position: center top;
 	background-attachment: fixed;
 }
-.trending {
-	background: url("../public/assets/Trending.jpg");
-	// linear-gradient(
-	// 	329deg,
-	// 	rgba(7, 0, 0, 0.151) 9.82%,
-	// 	rgba(26, 39, 158, 0.205) 90.63%
-	// );
+.trending-bg {
+	background: url("../public/assets/Trending.jpg"),
+		linear-gradient(
+			to top,
+			rgba(7, 0, 0, 0.438) 9.82%,
+			rgba(5, 7, 27, 0.521) 90.63%
+		);
 	min-height: 100vh;
 	background-blend-mode: color;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center 20%;
+	background-attachment: fixed;
+}
+.trending-bg-small {
+	background: url("../public/assets/Trending.jpg"),
+		linear-gradient(
+			to top,
+			rgba(7, 0, 0, 0.13) 9.82%,
+			rgba(5, 7, 27, 0.568) 90.63%
+		);
+
+	width: min(100% - 1.6em, 75rem);
+	height: 750px;
+	@media (min-width: 48em) {
+		width: 28.2rem;
+		height: 34.4rem;
+	}
+	background-blend-mode: color;
+	background-size: cover;
+	background-repeat: no-repeat;
 	background-position: center top;
-	// background-attachment: fixed;
+	border-radius: 25px;
 }
 
 @layer base {
 	.my-max {
 		width: min(100% - 1.6em, 75rem);
 		margin-inline: auto;
+	}
+
+	.my-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		width: 100%;
+		@media (min-width: 48em) {
+			grid-template-columns: 1fr;
+			width: fit-content;
+		}
 	}
 
 	.new {
