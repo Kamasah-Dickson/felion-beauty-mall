@@ -10,8 +10,9 @@ const Trending = () => {
 					Trending Products
 					<div className="after:rounded-full after:top-1/2 after:-translate-y-1/2  after:h-4 after:w-4 after:bg-white after:block after:absolute after:-right-1 rounded-full md:mt-5 sm:mt-6  ml-auto  w-3/4 h-1 bg-white relative"></div>
 				</h1>
-				<p className="text-base text-white mb-20">
-					Explore the newest and trending products in demand
+				<p className=" max-w-md text-base text-white mb-20">
+					Explore the newest and trending products in demand. The more you buy,
+					the more you get gifted
 				</p>
 				<div className="flex h-full gap-10  md:flex-row flex-col items-center justify-between">
 					<div className="my-grid gap-12">
@@ -73,7 +74,7 @@ const Trending = () => {
 							<div className="px-7 py-5 md:py-0 md:flex-[4]">
 								<h3 className="font-bold text-xl my-3">Accrelic Nails</h3>
 								<p className="font-normal mb-3 text-[#535353]">
-									But the accrelic nails at an affordable price
+									Buy the accrelic nails at an affordable price
 								</p>
 								<div className="flex flex-col mb-3 gap-5 md:justify-between md:flex-row">
 									<span className="font-bold  text-lg">GH12.48</span>
@@ -150,42 +151,11 @@ const Trending = () => {
 								</div>
 							</div>
 						</div>
-
-						{/* <div className="bg-white flex  items-center justify-center">
-							<div className="">
-								<Image
-									className=" object-cover h-40"
-									src={trendingImage}
-									width={200}
-									height={200}
-									alt=""
-								/>
-							</div>
-							<div className="px-5">
-								<h3>Accrelic Nails</h3>
-								<p>But the accrelic nails at an affordable price</p>
-								<span>GH12.48</span>
-							</div>
-						</div>
-						<div className="bg-white flex  items-center justify-center">
-							<div className="">
-								<Image
-									className=" object-cover h-40"
-									src={trendingImage}
-									width={200}
-									height={200}
-									alt=""
-								/>
-							</div>
-							<div className="px-5">
-								<h3>Accrelic Nails</h3>
-								<p>But the accrelic nails at an affordable price</p>
-								<span>GH12.48</span>
-							</div>
-						</div> */}
 					</div>
-					<div className="trending-bg-small">
-						<div></div>
+					<div className="trending-bg-small relative">
+						<p className="text-white font-medium absolute top-5 left-5">
+							Explore top quality products from Felion.
+						</p>
 					</div>
 				</div>
 			</section>
