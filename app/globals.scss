@@ -59,6 +59,20 @@ img {
 	background-position: center 20%;
 	background-attachment: fixed;
 }
+.cart-bg {
+	background: url("../public/assets/cartImage.svg"),
+		linear-gradient(
+			to top,
+			rgba(7, 0, 0, 0.322) 9.82%,
+			rgba(5, 7, 27, 0.247) 90.63%
+		);
+	min-height: 100vh;
+	background-blend-mode: color;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center 40%;
+	background-attachment: fixed;
+}
 .trending-bg-small {
 	background: url("../public/assets/Trending.jpg"),
 		linear-gradient(
