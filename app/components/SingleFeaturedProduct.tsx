@@ -61,12 +61,12 @@ const SingleFeaturedProduct = ({ category }: { category: string }) => {
 					return (
 						<SwiperSlide
 							key={product.id}
-							className={`rounded-3xl overflow-hidden shadow-lg ${
+							className={`overflow-hidden shadow-lg ${
 								product.new && "relative "
 							} text-black mx-auto`}
 						>
 							{product.new && (
-								<div className="absolute top-0 left-0 text-white bg-[crimson] py-2 text-sm rounded-tl-xl rounded-br-3xl  font-black px-8 w-fit">
+								<div className="absolute top-0 left-0 text-white bg-[crimson] py-2 text-sm rounded-br-3xl  font-black px-8 w-fit">
 									New
 								</div>
 							)}
@@ -76,7 +76,7 @@ const SingleFeaturedProduct = ({ category }: { category: string }) => {
 									src={product.productImage}
 									height={300}
 									width={300}
-									className="w-full select-none rounded-t-[24px] h-full object-cover"
+									className="w-full select-none  h-full object-cover"
 								></Image>
 							</div>
 							<div className=" bg-white py-3 pb-7 px-7 text-left">
