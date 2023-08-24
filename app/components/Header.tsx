@@ -106,7 +106,7 @@ const Header = () => {
 						<motion.li className=" list-none" variants={item}>
 							<Link
 								className={` text-sm font-medium uppercase relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all`}
-								href={""}
+								href={"/cart"}
 							>
 								Cart
 							</Link>
