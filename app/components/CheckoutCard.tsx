@@ -8,7 +8,10 @@ const CheckoutCard = () => {
 	const { cart, setCart } = useContext(ProductContext);
 
 	const totalCartPrice = cart.reduce((accumulator, currentProduct) => {
-		return 0;
+		return (
+			accumulator +
+			(currentProduct.numberOfItem as number) * currentProduct.price
+		);
 	}, 0);
 
 	return (
@@ -38,7 +41,7 @@ const CheckoutCard = () => {
 						</div>
 						<div className="flex text-2xl font-bold items-center gap-5">
 							<p className="text-[#535252]">Total</p>
-							<span>GH30.0</span>
+							<span>GH{totalCartPrice}.0</span>
 						</div>
 						<button className="flex max-w-md mx-auto md:max-w-none font-semibold text-lg mt-7 w-full rounded-xl shadow-lg active:scale-[1.02] text-white justify-between bg-[#FC3D46] py-3 px-5 items-center gap-5">
 							<p>Checkout</p>
