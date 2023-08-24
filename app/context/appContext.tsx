@@ -1,11 +1,5 @@
 "use client";
-import {
-	createContext,
-	useState,
-	SetStateAction,
-	Dispatch,
-	useEffect,
-} from "react";
+import { createContext, useState, SetStateAction, Dispatch } from "react";
 import { Iproducts } from "../interface/ProductInterface";
 interface storeContext {
 	setCart: Dispatch<SetStateAction<Icart[]>>;
@@ -78,10 +72,6 @@ const AppContext = ({ children }: { children: React.ReactElement }) => {
 			);
 		}
 	};
-
-	useEffect(() => {
-		console.log(cart);
-	}, [cart]);
 
 	return (
 		<ProductContext.Provider
