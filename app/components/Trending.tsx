@@ -1,20 +1,21 @@
 import Image from "next/image";
 import { MdAddShoppingCart } from "react-icons/md";
 import trendingImage from "@/public/assets/Trending.jpg";
+
 const Trending = () => {
 	return (
 		<div className="trending-bg">
 			<section className="my-max py-10">
 				<h1 className=" w-fit sm:text-5xl text-[36px] mb-5 pt-20 font-bold text-white  md:text-7xl">
 					Trending Products
-					<div className="after:rounded-full after:top-1/2 after:-translate-y-1/2  after:h-4 after:w-4 after:bg-white after:block after:absolute after:-right-1 rounded-full md:mt-5 sm:mt-6  ml-auto  w-3/4 h-1 bg-white relative md:-right-16"></div>
+					<div className="after:rounded-full after:top-1/2 after:-translate-y-1/2  after:h-4 after:w-4 after:bg-white after:block after:absolute after:-right-1 rounded-full md:mt-5 sm:mt-6  ml-auto  w-3/4 h-1 bg-white relative"></div>
 				</h1>
 				<p className="text-base text-white mb-20">
 					Explore the newest and trending products in demand
 				</p>
 				<div className="flex h-full gap-10  md:flex-row flex-col items-center justify-between">
 					<div className="my-grid gap-12">
-						<div className="bg-white rounded-lg flex overflow-hidden flex-col md:flex-row md:items-center max-w-[400px] md:max-w-none shadow-md mx-auto">
+						<div className="bg-white w-full rounded-2xl md:rounded-none flex overflow-hidden flex-col md:flex-row md:items-center max-w-[400px] md:max-w-none shadow-md mx-auto">
 							<div className="flex-[2] md:flex-auto overflow-hidden">
 								<Image
 									className="w-full h-64 object-cover md:h-40 "
@@ -25,22 +26,22 @@ const Trending = () => {
 								/>
 							</div>
 							<div className="px-7 py-5 md:py-0 md:flex-[4]">
-								<h3 className="font-bold text-xl mb-3">Accrelic Nails</h3>
-								<p className="font-normal mb-5 text-[#535353]">
+								<h3 className="font-bold text-xl my-3">Accrelic Nails</h3>
+								<p className="font-normal mb-3 text-[#535353]">
 									But the accrelic nails at an affordable price
 								</p>
-								<div className="flex flex-col gap-5 md:justify-between md:flex-row">
-									<span className="font-bold">GH12.48</span>
+								<div className="flex flex-col mb-3 gap-5 md:justify-between md:flex-row">
+									<span className="font-bold  text-lg">GH12.48</span>
 									<button
 										// onClick={() => addItemToCart(product)}
-										className=" relative bg-[black]  md:hover:bg-none hover:bg-[#0c0a74] transition-colors text-white font-medium md:rounded-md rounded-full text-base p-3 md:p-1 active:scale-[1.02]"
+										className=" relative bg-[black]  md:hover:bg-none hover:bg-[#0c0a74] transition-colors text-white font-medium md:rounded-md rounded-full text-base p-[6px] active:scale-[1.02]"
 										type="button"
 									>
-										<p className="md:hidden">Add To Cart</p>
+										<p className="p-2 md:hidden ">Add To Cart</p>
 										<MdAddShoppingCart
-											className="hidden md:flex"
+											className=" hidden md:flex"
 											color="white"
-											size={23}
+											size={20}
 										/>
 
 										{/* {numberOfItem > 0 && ( */}
@@ -59,7 +60,7 @@ const Trending = () => {
 								</div>
 							</div>
 						</div>
-						<div className="bg-white rounded-lg flex overflow-hidden flex-col md:flex-row md:items-center max-w-[400px] md:max-w-none shadow-md mx-auto">
+						<div className="bg-white w-full rounded-2xl md:rounded-none flex overflow-hidden flex-col md:flex-row md:items-center max-w-[400px] md:max-w-none shadow-md mx-auto">
 							<div className="flex-[2] md:flex-auto overflow-hidden">
 								<Image
 									className="w-full h-64 object-cover md:h-40 "
@@ -70,22 +71,22 @@ const Trending = () => {
 								/>
 							</div>
 							<div className="px-7 py-5 md:py-0 md:flex-[4]">
-								<h3 className="font-bold text-xl mb-3">Accrelic Nails</h3>
-								<p className="font-normal mb-5 text-[#535353]">
+								<h3 className="font-bold text-xl my-3">Accrelic Nails</h3>
+								<p className="font-normal mb-3 text-[#535353]">
 									But the accrelic nails at an affordable price
 								</p>
-								<div className="flex flex-col gap-5 md:justify-between md:flex-row">
-									<span className="font-bold">GH12.48</span>
+								<div className="flex flex-col mb-3 gap-5 md:justify-between md:flex-row">
+									<span className="font-bold  text-lg">GH12.48</span>
 									<button
 										// onClick={() => addItemToCart(product)}
-										className=" relative bg-[black]  md:hover:bg-none hover:bg-[#0c0a74] transition-colors text-white font-medium md:rounded-md rounded-full text-base p-3 md:p-1 active:scale-[1.02]"
+										className=" relative bg-[black]  md:hover:bg-none hover:bg-[#0c0a74] transition-colors text-white font-medium md:rounded-md rounded-full text-base p-[6px] active:scale-[1.02]"
 										type="button"
 									>
-										<p className="md:hidden">Add To Cart</p>
+										<p className="p-2 md:hidden">Add To Cart</p>
 										<MdAddShoppingCart
-											className="hidden md:flex"
+											className=" hidden md:flex"
 											color="white"
-											size={23}
+											size={20}
 										/>
 
 										{/* {numberOfItem > 0 && ( */}
@@ -104,7 +105,7 @@ const Trending = () => {
 								</div>
 							</div>
 						</div>
-						<div className="bg-white rounded-lg flex overflow-hidden flex-col md:flex-row md:items-center max-w-[400px] md:max-w-none shadow-md mx-auto">
+						<div className="bg-white w-full rounded-2xl md:rounded-none flex overflow-hidden flex-col md:flex-row md:items-center max-w-[400px] md:max-w-none shadow-md mx-auto">
 							<div className="flex-[2] md:flex-auto overflow-hidden">
 								<Image
 									className="w-full h-64 object-cover md:h-40 "
@@ -115,22 +116,22 @@ const Trending = () => {
 								/>
 							</div>
 							<div className="px-7 py-5 md:py-0 md:flex-[4]">
-								<h3 className="font-bold text-xl mb-3">Accrelic Nails</h3>
-								<p className="font-normal mb-5 text-[#535353]">
+								<h3 className="font-bold text-xl my-3">Accrelic Nails</h3>
+								<p className="font-normal mb-3 text-[#535353]">
 									But the accrelic nails at an affordable price
 								</p>
-								<div className="flex flex-col gap-5 md:justify-between md:flex-row">
-									<span className="font-bold">GH12.48</span>
+								<div className="flex flex-col mb-3 gap-5 md:justify-between md:flex-row">
+									<span className="font-bold  text-lg">GH12.48</span>
 									<button
 										// onClick={() => addItemToCart(product)}
-										className=" relative bg-[black]  md:hover:bg-none hover:bg-[#0c0a74] transition-colors text-white font-medium md:rounded-md rounded-full text-base p-3 md:p-1 active:scale-[1.02]"
+										className=" relative bg-[black]  md:hover:bg-none hover:bg-[#0c0a74] transition-colors text-white font-medium md:rounded-md rounded-full text-base p-[6px] active:scale-[1.02]"
 										type="button"
 									>
-										<p className="md:hidden">Add To Cart</p>
+										<p className="p-2 md:hidden">Add To Cart</p>
 										<MdAddShoppingCart
-											className="hidden md:flex"
+											className=" hidden md:flex"
 											color="white"
-											size={23}
+											size={20}
 										/>
 
 										{/* {numberOfItem > 0 && ( */}
