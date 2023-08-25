@@ -12,31 +12,14 @@ const Featured = ({
 	const [category, setCategory] = useState("all");
 	const featuredProducts = ["all", "wigs", "nails"];
 
-	const marqueeData = [
-		"enjoy a free discount by buying one of the best products from felion artistry",
-		"remember your skin really do matters and counts to your beauty",
-	];
-
 	return (
 		<div
 			ref={featuredRef}
 			id="featured"
 			className=" featured relative bg-[#0a0a14] text-white py-28"
 		>
-			{/* <div className="w-full flex bg-[black] overflow-hidden text-white h-16 absolute -top-8 ">
-				<div className="flex w-fit scrolling-text h-full gap-20 ">
-					{marqueeData.map((cat) => (
-						<p
-							key={cat}
-							className={`text-white font-black uppercase grid place-content-center text-2xl md:text-3xl h-full w-full `}
-						>
-							{cat}
-						</p>
-					))}
-				</div>
-			</div> */}
 			<div className="my-max">
-				<motion.h1
+				<motion.h3
 					initial={{ opacity: 0, y: "-40%" }}
 					whileInView={{
 						opacity: 1,
@@ -49,8 +32,8 @@ const Featured = ({
 					<span className="font-medium text-xl md:text-3xl text-white">
 						Collections{" "}
 					</span>
-				</motion.h1>
-				<motion.h1
+				</motion.h3>
+				<motion.h4
 					initial={{ opacity: 0, y: "40%" }}
 					whileInView={{
 						opacity: 1,
@@ -67,10 +50,10 @@ const Featured = ({
 							x: "0%",
 							transition: { ease: "easeIn", duration: 0.6, delay: 0.5 },
 						}}
-						// viewport={{ once: true }}
+						viewport={{ once: true }}
 						className="after:rounded-full mb-20 after:top-1/2 after:-translate-y-1/2  after:h-4 after:w-4 after:bg-white after:block after:absolute after:-right-1 rounded-full md:mt-5 sm:mt-6  ml-auto  w-3/4 h-1 bg-white relative "
 					></motion.div>
-				</motion.h1>
+				</motion.h4>
 
 				<motion.ul
 					variants={container}
