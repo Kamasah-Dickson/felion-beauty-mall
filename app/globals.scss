@@ -29,6 +29,22 @@ img {
 	background-position: center 15%;
 	background-repeat: no-repeat;
 }
+
+.overlay-blend {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-blend-mode: color;
+	mix-blend-mode: luminosity;
+	background: linear-gradient(
+		329deg,
+		rgba(7, 0, 0, 0.5) 9.82%,
+		rgba(26, 39, 158, 0.5) 90.63%
+	);
+}
 .featured {
 	background: url("../public/assets/featured.svg"),
 		linear-gradient(
