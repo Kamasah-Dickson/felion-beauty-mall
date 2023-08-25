@@ -25,7 +25,7 @@ function HeroSection() {
 				<Image
 					src={homepageBg}
 					alt="Felion Beauty mall"
-					layout="fill"
+					fill
 					objectFit="cover"
 					priority
 					className="object-top"
@@ -99,7 +99,6 @@ function HeroSection() {
 				</section>
 			</div>
 			<Featured featuredRef={featuredRef} />
-			{/* Rest of your code */}
 		</>
 	);
 }
