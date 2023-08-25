@@ -1,5 +1,11 @@
 import { BsArrowLeft } from "react-icons/bs";
 import CheckoutCard from "../components/CheckoutCard";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Felion Beauty Mall - Cart",
+	description: "Checkout and get free gifts from Felion Beauty mall",
+};
 
 const page = () => {
 	return (
