@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { Icart, Iproducts } from "../interface/ProductInterface";
+import { MdClose } from "react-icons/md";
 
 const CartItem = ({
 	cart,
@@ -48,14 +49,27 @@ const CartItem = ({
 			);
 		}
 	};
+
+	const handleRemove = (targetProduct: Iproducts) => {
+		setCart((prev) =>
+			prev.filter((product) => product.id !== targetProduct.id)
+		);
+	};
+
 	return (
 		<div className="grid grid-cols-1 gap-5">
 			{cart.map((product) => {
 				return (
 					<div
 						key={product.id}
-						className="bg-white w-full h-fit rounded-2xl md:rounded-none flex overflow-hidden flex-col md:flex-row md:items-center max-w-[400px] md:max-w-none shadow-md mx-auto"
+						className="bg-white w-full h-fit rounded-2xl md:rounded-none flex overflow-hidden flex-col md:flex-row md:items-center relative max-w-[400px] md:max-w-none shadow-md mx-auto"
 					>
+						<MdClose
+							color="#FC3D46"
+							size={25}
+							className="absolute right-3 top-3 cursor-pointer"
+							onClick={() => handleRemove(product)}
+						/>
 						<div className=" overflow-hidden">
 							<Image
 								className="w-full h-64 object-cover md:h-40 "
