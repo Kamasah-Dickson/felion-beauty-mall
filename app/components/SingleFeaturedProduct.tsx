@@ -80,9 +80,9 @@ const SingleFeaturedProduct = ({ category }: { category: string }) => {
 								></Image>
 							</div>
 							<div className=" bg-white py-3 pb-7 px-7 text-left">
-								<h3 className="font-black text-3xl mb-3">
+								<h5 className="font-black text-3xl mb-3">
 									{product.productName}
-								</h3>
+								</h5>
 								<span className="font-normal text-base text-[#494949]">
 									{product.description}
 								</span>
