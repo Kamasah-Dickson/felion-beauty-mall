@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Featured from "./Featured";
 import { useRef } from "react";
+import Image from "next/image";
+import homepageBg from "@/public/assets/homepageBg.svg";
 
 function HeroSection() {
 	const featuredRef = useRef<HTMLDivElement | null>(null);
@@ -18,8 +20,17 @@ function HeroSection() {
 
 	return (
 		<>
-			<div className="hero">
-				<section className="md:px-5 my-max mt-24">
+			<div className="relative min-h-screen overflow-x-hidden w-full">
+				<div className="overlay-blend"></div>
+				<Image
+					src={homepageBg}
+					alt="Felion Beauty mall"
+					layout="fill"
+					objectFit="cover"
+					priority
+					className="object-top"
+				/>
+				<section className="md:px-5 z-[2] relative my-max mt-24">
 					<motion.h1
 						initial={{ opacity: 0, x: "15%" }}
 						animate={{
@@ -58,7 +69,7 @@ function HeroSection() {
 								<Link
 									href={"/"}
 									className="active
-							text-[#6456e7] 
+							text-[#6456e7]
 							font-bold hover:text-white md:ml-0 ml-5 relative before:absolute before:rounded-sm before:-bottom-2 before:block before:left-0 before:w-1/2 before:hover:w-full before:h-1 before:bg-white cursor-pointer before:hover:bg-[#6456e7] before:transition-all "
 								>
 									Shop Now
@@ -67,7 +78,7 @@ function HeroSection() {
 						</ul>
 					</div>
 					<motion.div
-						className="mb-80 relative w-12 h-12 mx-auto before:absolute before:border 
+						className="mb-80 relative w-12 h-12 mx-auto before:absolute before:border
 						before:border-dashed before:-z-10 before:my-animation before:h-20 before:rounded-full before:w-20"
 						initial={{ opacity: 0, y: "25%" }}
 						whileInView={{
@@ -88,6 +99,7 @@ function HeroSection() {
 				</section>
 			</div>
 			<Featured featuredRef={featuredRef} />
+			{/* Rest of your code */}
 		</>
 	);
 }
