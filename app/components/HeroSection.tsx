@@ -44,25 +44,27 @@ function HeroSection() {
 						>
 							Felion Beauty Mall
 						</motion.h2>
-						<motion.li
-							className="list-none"
-							initial={{ opacity: 0, y: "40%" }}
-							whileInView={{
-								opacity: 1,
-								y: "0%",
-								transition: { delay: 0, ease: "easeIn", duration: 1.5 },
-							}}
-							// viewport={{ once: true }}
-						>
-							<Link
-								href={"/"}
-								className="active
+						<ul>
+							<motion.li
+								className="list-none"
+								initial={{ opacity: 0, y: "40%" }}
+								whileInView={{
+									opacity: 1,
+									y: "0%",
+									transition: { delay: 0, ease: "easeIn", duration: 1.5 },
+								}}
+								// viewport={{ once: true }}
+							>
+								<Link
+									href={"/"}
+									className="active
 							text-[#6456e7] 
 							font-bold hover:text-white md:ml-0 ml-5 relative before:absolute before:rounded-sm before:-bottom-2 before:block before:left-0 before:w-1/2 before:hover:w-full before:h-1 before:bg-white cursor-pointer before:hover:bg-[#6456e7] before:transition-all "
-							>
-								Shop Now
-							</Link>
-						</motion.li>
+								>
+									Shop Now
+								</Link>
+							</motion.li>
+						</ul>
 					</div>
 					<motion.div
 						className="mb-80 relative w-12 h-12 mx-auto before:absolute before:border 
