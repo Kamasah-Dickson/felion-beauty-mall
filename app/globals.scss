@@ -4,7 +4,6 @@
 
 *::selection {
 	background-color: rgb(51, 37, 117);
-	scroll-behavior: smooth;
 }
 
 body {
@@ -16,7 +15,7 @@ img {
 }
 
 .hero {
-	background: url("../public/assets/homepageBg.jpg"),
+	background: url("../public/assets/homepageBg.svg"),
 		linear-gradient(
 			329deg,
 			rgba(7, 0, 0, 0.5) 9.82%,
@@ -24,7 +23,6 @@ img {
 		);
 	background-blend-mode: color;
 	min-height: 100vh;
-
 	overflow-x: hidden;
 	width: 100%;
 	background-size: cover;
@@ -32,7 +30,7 @@ img {
 	background-repeat: no-repeat;
 }
 .featured {
-	background: url("../public/assets/featured.jpg"),
+	background: url("../public/assets/featured.svg"),
 		linear-gradient(
 			329deg,
 			rgba(7, 0, 0, 0.5) 9.82%,
@@ -46,7 +44,7 @@ img {
 	background-attachment: fixed;
 }
 .trending-bg {
-	background: url("../public/assets/Trending.jpg"),
+	background: url("../public/assets/Trending.svg"),
 		linear-gradient(
 			to top,
 			rgba(7, 0, 0, 0.548) 9.82%,
@@ -74,7 +72,7 @@ img {
 	background-attachment: fixed;
 }
 .trending-bg-small {
-	background: url("../public/assets/Trending.jpg"),
+	background: url("../public/assets/Trending.svg"),
 		linear-gradient(
 			to top,
 			rgba(7, 0, 0, 0.13) 9.82%,
