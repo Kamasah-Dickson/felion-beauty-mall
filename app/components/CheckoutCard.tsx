@@ -1,8 +1,9 @@
 "use client";
 import React from "react";
 import CartItem from "./CartItem";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { ProductContext } from "../context/appContext";
+import { BsCart3 } from "react-icons/bs";
 
 const CheckoutCard = () => {
 	const { cart, setCart } = useContext(ProductContext);
@@ -14,7 +15,7 @@ const CheckoutCard = () => {
 		);
 	}, 0);
 
-	return (
+	return cart.length >= 1 ? (
 		<div className="grid grid-cols-1 md:grid-cols-2 gap-7 py-5">
 			<CartItem cart={cart} setCart={setCart} />
 			<div className="bg-white shadow-xl md:max-w-lg md:ml-auto rounded-2xl sticky p-7 top-20 h-fit right-0">
@@ -50,6 +51,21 @@ const CheckoutCard = () => {
 					</div>
 				</div>
 			</div>
+		</div>
+	) : (
+		<div>
+			<div className="flex items-center gap-5 justify-center">
+				<p className="text-white text-center md:text-4xl text-3xl">
+					You have nothing in cart
+				</p>
+				<BsCart3 size={35} color="white" className="hidden sm:flex" />
+			</div>
+			<button
+				type="button"
+				className="flex mx-auto mt-7 items-center gap-5 font-medium bg-black hover:bg-[#030305] text-white rounded-lg py-3 px-8 active:scale-[1.02]"
+			>
+				<p className="text-white font-medium">Okay {`Let's`} shop</p>
+			</button>
 		</div>
 	);
 };
