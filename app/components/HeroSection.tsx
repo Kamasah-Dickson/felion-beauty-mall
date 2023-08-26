@@ -43,18 +43,9 @@ function HeroSection() {
 						Let's Shop Beauty
 					</motion.h1>
 					<div className="mt-[45%] lg:mt-[30%] pb-20">
-						<motion.h2
-							initial={{ opacity: 0, y: "-25%" }}
-							whileInView={{
-								opacity: 1,
-								y: "0%",
-								transition: { delay: 0.7, ease: "easeIn", duration: 1.1 },
-							}}
-							viewport={{ once: true }}
-							className="p-5 md:p-0 text-white text-6xl md:max-w-lg lg:max-w-3xl lg:text-9xl max-w-sm md:text-8xl font-black "
-						>
+						<h2 className="p-5 md:p-0 text-white text-6xl md:max-w-lg lg:max-w-3xl lg:text-9xl max-w-sm md:text-8xl font-black ">
 							Felion Beauty Mall
-						</motion.h2>
+						</h2>
 						<ul>
 							<motion.li
 								className="list-none"
@@ -64,10 +55,10 @@ function HeroSection() {
 									y: "0%",
 									transition: { delay: 0, ease: "easeIn", duration: 1.5 },
 								}}
-								// viewport={{ once: true }}
+								viewport={{ once: true }}
 							>
 								<Link
-									href={"/"}
+									href={"/shop_now"}
 									className="active
 							text-[#6456e7]
 							font-bold hover:text-white md:ml-0 ml-5 relative before:absolute before:rounded-sm before:-bottom-2 before:block before:left-0 before:w-1/2 before:hover:w-full before:h-1 before:bg-white cursor-pointer before:hover:bg-[#6456e7] before:transition-all "
