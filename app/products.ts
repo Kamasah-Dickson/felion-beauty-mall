@@ -25,7 +25,7 @@ export const products: Iproducts[] = [
 		productName: "Accrelic Nails1",
 		category: "nails",
 		new: true,
-		discount: 40,
+		discount: 0,
 		description:
 			"Buy the accrelic nails at an affordable price and enjoy a free discount",
 		price: 20,
@@ -37,7 +37,7 @@ export const products: Iproducts[] = [
 		productName: "Accrelic Nails1",
 		category: "nails",
 		new: false,
-		discount: 40,
+		discount: 0,
 		description:
 			"Buy the accrelic nails at an affordable price and enjoy a free discount",
 		price: 20,
@@ -72,7 +72,7 @@ export const products: Iproducts[] = [
 		productName: "Wig4",
 		category: "wigs",
 		new: true,
-		discount: 40,
+		discount: 0,
 		description:
 			"Buy the accrelic nails at an affordable price and enjoy a free discount",
 		price: 20,
