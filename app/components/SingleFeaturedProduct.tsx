@@ -76,6 +76,7 @@ const SingleFeaturedProduct = ({ category }: { category: string }) => {
 									src={product.productImage}
 									height={300}
 									width={300}
+									blurDataURL={product.productImage as string}
 									className="w-full select-none  h-full object-cover"
 								></Image>
 							</div>
