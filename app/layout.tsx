@@ -7,6 +7,7 @@ import AppContext from "./context/appContext";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Footer from "./components/Footer";
 
 const roboto = Roboto({
 	subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
 						{children}
 					</>
 				</AppContext>
+				<Footer />
 			</body>
 		</html>
 	);
