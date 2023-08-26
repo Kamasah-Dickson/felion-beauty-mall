@@ -26,6 +26,7 @@ const Featured = ({
 						y: "0%",
 						transition: { ease: "easeIn", duration: 0.7 },
 					}}
+					viewport={{ once: true }}
 					className="text-2xl mt-7 md:text-4xl text-[#e67f20] font-bold"
 				>
 					New{" "}
@@ -40,15 +41,16 @@ const Featured = ({
 						y: "0%",
 						transition: { ease: "easeIn", duration: 0.7 },
 					}}
+					viewport={{ once: true }}
 					className=" w-fit overflow-x-hidden md:overflow-x-visible  px-1 md:px-0 sm:text-5xl text-[34px] md:pt-5 font-bold text-white  md:text-7xl"
 				>
 					Featured Products
 					<motion.div
-						initial={{ opacity: 0, x: "35%" }}
+						initial={{ opacity: 0, y: "-5%" }}
 						whileInView={{
 							opacity: 1,
-							x: "0%",
-							transition: { ease: "easeIn", duration: 0.6, delay: 0.5 },
+							y: "0%",
+							transition: { ease: "easeIn", duration: 0.6, delay: 0.8 },
 						}}
 						viewport={{ once: true }}
 						className="after:rounded-full mb-20 after:top-1/2 after:-translate-y-1/2  after:h-4 after:w-4 after:bg-white after:block after:absolute after:-right-1 rounded-full md:mt-5 sm:mt-6  ml-auto  w-3/4 h-1 bg-white relative "
