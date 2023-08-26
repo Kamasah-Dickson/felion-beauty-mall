@@ -95,5 +95,3 @@ const MobileNav = () => {
 };
 
 export default MobileNav;
-
-// className={`fixed top-0 left-0 w-full h-screen bg-[#0000006c] transition-transform duration-300 transform ${
