@@ -70,7 +70,7 @@ const CartItem = ({
 							className="absolute right-3 top-3 cursor-pointer"
 							onClick={() => handleRemove(product)}
 						/>
-						<div className=" overflow-hidden">
+						<div className=" relative overflow-hidden">
 							<Image
 								className="w-full h-64 object-cover md:h-40 "
 								src={product.productImage}
@@ -78,6 +78,12 @@ const CartItem = ({
 								height={300}
 								alt=""
 							/>
+
+							{product.discount ? (
+								<div className="absolute top-0 left-0 text-white bg-[#4643D1] py-2 text-sm rounded-br-3xl font-black px-5 w-fit">
+									-{product.discount}% off
+								</div>
+							) : null}
 						</div>
 						<div className="px-7 py-5 md:py-0 ">
 							<h3 className="font-bold text-xl my-3">Accrelic Nails</h3>
@@ -87,7 +93,7 @@ const CartItem = ({
 							<div className="flex flex-col mb-3 gap-5 md:justify-between md:flex-row">
 								<span className="font-bold  text-lg">GH{product.price}.00</span>
 								<div>
-									<div className=" flex gap-2 items-center bg-[black]  md:hover:bg-none hover:bg-[#0c0a74] transition-colors text-white font-medium md:rounded-md rounded-full text-base p-[6px] active:scale-[1.02]">
+									<div className=" flex gap-2 items-center bg-[black] w-fit  md:hover:bg-none hover:bg-[#0c0a74] transition-colors text-white font-medium md:rounded-md rounded-full text-base p-[6px] active:scale-[1.02]">
 										<button
 											type="button"
 											onClick={() => handleDecrement(product)}
