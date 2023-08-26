@@ -61,37 +61,25 @@ const MobileNav = () => {
 						Home
 					</Link>
 					<Link
+						href={"/shop_now"}
 						onClick={() => setToggleNav(false)}
 						className="active relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-1 before:bg-white before:transition-all "
-						href={""}
 					>
 						Shop
 					</Link>
+
 					<Link
-						onClick={() => setToggleNav(false)}
-						className="active relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-1 before:bg-white before:transition-all "
-						href={""}
-					>
-						Products
-					</Link>
-					<Link
+						href={"/explore"}
 						onClick={() => setToggleNav(false)}
 						className="active relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-1 before:bg-white before:transition-all"
-						href={""}
 					>
 						Explore
 					</Link>
+
 					<Link
+						href={"/cart"}
 						onClick={() => setToggleNav(false)}
 						className="active relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-1 before:bg-white before:transition-all"
-						href={""}
-					>
-						Services
-					</Link>
-					<Link
-						onClick={() => setToggleNav(false)}
-						className="active relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-1 before:bg-white before:transition-all"
-						href={""}
 					>
 						Cart
 						{cart.length >= 1 && (
