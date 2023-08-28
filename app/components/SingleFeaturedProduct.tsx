@@ -61,7 +61,7 @@ const SingleFeaturedProduct = ({ category }: { category: string }) => {
 					return (
 						<SwiperSlide
 							key={product.id}
-							className={`overflow-hidden shadow-lg ${
+							className={`overflow-hidden max-w-2xl shadow-lg ${
 								product.new && "relative "
 							} text-black mx-auto`}
 						>
