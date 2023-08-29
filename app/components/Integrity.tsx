@@ -5,8 +5,8 @@ import returnImage from "@/public/assets/loop.svg";
 
 const Integrity = () => {
 	return (
-		<div className=" bg-[#1f1f1f]">
-			<div className="my-max md:py-20 py-14 gap-7 flex flex-col sm:flex-row items-center justify-center">
+		<div className=" bg-[#00030af5]">
+			<div className="my-max py-14 gap-10 flex flex-col sm:flex-row items-center justify-center">
 				<div className="max-w-xs md:mx-0  mx-auto flex items-center flex-col">
 					<div className="">
 						<Image src={quality} alt="Quality support" width={70} height={70} />
