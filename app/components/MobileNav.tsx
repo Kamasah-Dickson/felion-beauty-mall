@@ -69,11 +69,19 @@ const MobileNav = () => {
 					</Link>
 
 					<Link
-						href={"/explore"}
+						href={"/faq"}
 						onClick={() => setToggleNav(false)}
 						className="active relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-1 before:bg-white before:transition-all"
 					>
-						Explore
+						FAQ
+					</Link>
+
+					<Link
+						href={"/contact"}
+						onClick={() => setToggleNav(false)}
+						className="active relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-1 before:bg-white before:transition-all"
+					>
+						Contact
 					</Link>
 
 					<Link
