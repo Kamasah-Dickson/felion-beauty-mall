@@ -8,6 +8,7 @@ import Featured from "./Featured";
 import { useRef } from "react";
 import Image from "next/image";
 import homepageBg from "@/public/assets/homepageBg.svg";
+import Integrity from "./Integrity";
 
 function HeroSection() {
 	const featuredRef = useRef<HTMLDivElement | null>(null);
@@ -90,6 +91,7 @@ function HeroSection() {
 				</section>
 			</div>
 			<Featured featuredRef={featuredRef} />
+			<Integrity />
 		</>
 	);
 }
