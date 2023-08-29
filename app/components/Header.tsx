@@ -76,19 +76,6 @@ const Header = () => {
 								</Link>
 							</motion.p>
 						</li>
-						<li className="overflow-hidden">
-							<motion.p className="list-none" variants={item}>
-								<Link
-									href={"/explore"}
-									className={`${
-										pathname === "/explore" &&
-										"before:w-full before:h-[4px] before:!bg-[#6456e1] "
-									} text-sm font-medium uppercase relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all `}
-								>
-									Explore
-								</Link>
-							</motion.p>
-						</li>
 
 						<li className="overflow-hidden">
 							<motion.p className="list-none" variants={item}>
@@ -100,6 +87,19 @@ const Header = () => {
 									} text-sm font-medium uppercase relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all `}
 								>
 									FAQ
+								</Link>
+							</motion.p>
+						</li>
+						<li className="overflow-hidden">
+							<motion.p className="list-none" variants={item}>
+								<Link
+									href={"/contact"}
+									className={`${
+										pathname === "/contact" &&
+										"before:w-full before:h-[4px] before:!bg-[#6456e1] "
+									} text-sm font-medium uppercase relative before:absolute before:rounded-sm before:-bottom-1 before:block before:left-0 before:w-0 before:hover:w-full before:h-[3px] before:bg-white before:transition-all `}
+								>
+									Contact
 								</Link>
 							</motion.p>
 						</li>
