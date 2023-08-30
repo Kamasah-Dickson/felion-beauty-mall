@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import quality from "@/public/assets/Quality Suport.svg";
 import returnImage from "@/public/assets/loop.svg";
 
