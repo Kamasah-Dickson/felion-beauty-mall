@@ -1,7 +1,6 @@
 "use client";
 import { useContext, useState } from "react";
 import Image from "next/image";
-
 import shopBackground from "@/public/assets/shopBackground.svg";
 import { BsArrowDown } from "react-icons/bs";
 import { useRef } from "react";
